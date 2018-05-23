@@ -15,10 +15,16 @@
           </p>
           <cite class="f6 ttu tracked fs-normal"></cite>
         </blockquote>
+        <br/>
+        <div class="mt5">
+          <a class="yellow no-underline serif grow mt5" href="#what-we-do">
+            <h3 class="sans-serif">Learn how we can help &darr;</h3>
+          </a>
+        </div>
       </div>
     </div>
     </article>
-    <section class="bg-black-0125 w-100">
+    <section class="bg-black-0125 w-100" id="what-we-do">
 	<div class="tl bt b--black-10 pa3 pa5-ns bg-lightest-blue navy" id="principles">
 	  <div class="mw9 center">
 		<h1 class="f5 ttu tracked fw6">What we do</h1>
@@ -97,4 +103,14 @@
     </p>
     </footer>
   </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+      $(document).on('click', 'a[href^="#"]', function (event) {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: $($.attr(this, 'href')).offset().top
+          }, 'slow');
+     });
+
+  </script>
 </html>
